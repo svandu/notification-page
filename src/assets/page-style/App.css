@@ -1,0 +1,49 @@
+:root {
+    --background-color: hsl(210, 60%, 98%);
+    --box-bg-color: hsl(0, 0%, 100%);
+    --highlight-color: hsl(224, 21%, 14%);
+    --para-color: hsl(219, 12%, 42%);
+    --notification-color: hsl(219, 14%, 63%);
+}
+
+.root-container {
+    height: 100vh;
+    background-color: var(--background-color);
+    font-family: "Poppins", sans-serif;
+    border: 1px solid red;
+}
+
+.main-container {
+    border: 1px solid red;
+    width: 45%;
+    height: 90%;
+    margin: 2rem 30%;
+    padding: 0 20px;
+}
+
+.header-container {
+    height: 40px;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0 10px 10px 10px;
+    color: var(--highlight-color);
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-part {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.notification-number {
+    height: 25px;
+    width: 30px;
+    border-radius: 5px;
+    margin-top: 18px;
+    background-color: var(--highlight-color);
+    color: #fff;
+    /* padding: 5px 10px; */
+}
