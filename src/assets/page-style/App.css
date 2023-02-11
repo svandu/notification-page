@@ -45,5 +45,34 @@
     margin-top: 18px;
     background-color: var(--highlight-color);
     color: #fff;
-    /* padding: 5px 10px; */
+}
+
+.notification-msg {
+    padding: 5px 10px;
+    font-size: 1rem;
+    border: 1px solid red;
+}
+
+.profile-img{
+    width: 30px;
+    border: 1px solid red;
+}
+
+.person-topic {
+    margin-top: 15px;
+}
+
+.person-name, .person-topic {
+    color: var(--highlight-color);
+    font-weight: bold;
+}
+
+.msg-time {
+    padding-left: 32px;
+}
+
+.private_msg{
+    border: 1px solid red;
+    margin-left: 55px;
+    font-size: 1rem;
 }
