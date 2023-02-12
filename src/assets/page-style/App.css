@@ -14,11 +14,12 @@
 }
 
 .main-container {
-    border: 1px solid red;
     width: 45%;
     height: 90%;
     margin: 2rem 30%;
     padding: 0 20px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .header-container {
@@ -28,6 +29,7 @@
     padding: 0 10px 10px 10px;
     color: var(--highlight-color);
     font-weight: bold;
+    margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
 }
@@ -48,31 +50,59 @@
 }
 
 .notification-msg {
-    padding: 5px 10px;
+    padding: 8px 10px;
     font-size: 1rem;
-    border: 1px solid red;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.notification-msg:nth-child(-n+4) {
+    background-color: hsl(211, 68%, 94%);
+}
+
+.notification-line {
+    display: inline-block;
+    margin-bottom: -10px;
 }
 
 .profile-img{
     width: 30px;
-    border: 1px solid red;
+    float: left;
+    margin-right: 10px;
+}
+
+.msg-img {
+    width: 30px;
+    float: right;
+    margin-left: 250px;
 }
 
 .person-topic {
     margin-top: 15px;
 }
 
+.person-para, .msg-time {
+    color: #000000a9;
+}
+
 .person-name, .person-topic {
-    color: var(--highlight-color);
+    color: #000;
     font-weight: bold;
 }
 
-.msg-time {
-    padding-left: 32px;
+.person-name:hover, .person-topic:hover {
+    color: hsl(219, 85%, 26%);
 }
 
-.private_msg{
-    border: 1px solid red;
-    margin-left: 55px;
-    font-size: 1rem;
+.msg-time {
+    margin: 0 40px;
+}
+
+.private-msg {
+    /* border: 1px solid red; */
+    margin: 10px 0 0 55px;
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: hsl(219, 14%, 63%);
 }
