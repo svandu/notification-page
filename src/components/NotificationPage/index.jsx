@@ -71,11 +71,12 @@ function NotificationPage(props) {
               alt="profile image"
             />
             <span className="person-name">{singleNotification.name}</span>{" "}
-            {singleNotification.para}{" "}
+            <span className="person-para">{singleNotification.para}</span>{" "}
             <span className="person-topic">{singleNotification.topic} </span>
+            <img className="msg-img" src={singleNotification.msg_img} alt="msg_image"/>
           </div>
-          <span className="msg-time">{singleNotification.time}</span>
-          <div className="private_msg">{singleNotification.message}</div>
+          <p className="msg-time">{singleNotification.time}</p>
+          <div className="private-msg">{singleNotification.message}</div>
         </div>
       ))}
     </div>
