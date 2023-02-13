@@ -1,5 +1,5 @@
 import React from 'react'
-import './assets/page-style/App.css'
+import './App.css'
 import NotificationPage from './components/NotificationPage'
 
 function App() {
