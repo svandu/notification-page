@@ -1,0 +1,117 @@
+:root {
+    --background-color: hsl(210, 60%, 98%);
+    --box-bg-color: hsl(0, 0%, 100%);
+    --highlight-color: hsl(224, 21%, 14%);
+    --para-color: hsl(219, 12%, 42%);
+    --notification-color: hsl(219, 14%, 63%);
+}
+
+.root-container {
+    height: 100vh;
+    background-color: var(--background-color);
+    font-family: "Poppins", sans-serif;
+    border: 1px solid red;
+}
+
+.main-container {
+    width: 45%;
+    height: 90%;
+    margin: 2rem 30%;
+    padding: 0 20px;
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.header-container {
+    height: 40px;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0 10px 10px 10px;
+    color: var(--highlight-color);
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.first-part {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.notification-number {
+    height: 25px;
+    width: 30px;
+    border-radius: 5px;
+    margin-top: 18px;
+    background-color: var(--highlight-color);
+    color: #fff;
+}
+
+.notification-msg {
+    padding: 10px 10px;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.notification-msg:nth-child(-n+4) {
+    background-color: hsl(211, 68%, 94%);
+}
+
+.notification-line {
+    display: inline-block;
+    margin-bottom: -10px;
+}
+
+.profile-img{
+    width: 30px;
+    float: left;
+    margin-right: 10px;
+}
+
+.msg-img {
+    width: 30px;
+    float: right;
+    margin-left: 250px;
+}
+
+.no-msg-img {
+    display: none;
+}
+
+.person-topic {
+    margin-top: 15px;
+}
+
+.person-para, .msg-time {
+    color: #000000a9;
+}
+
+.person-name, .person-topic {
+    color: #000;
+    font-weight: bold;
+}
+
+.person-name:hover, .person-topic:hover {
+    color: hsl(219, 85%, 26%);
+}
+
+.msg-time {
+    margin: 0 40px;
+}
+
+.private-msg {
+    /* border: 1px solid red; */
+    margin: 10px 0 0 55px;
+    font-size: 1rem;
+    color: #fff;
+    padding: 20px;
+    background-color: hsl(219, 14%, 63%);
+}
+
+.no-private-msg {
+    display: none;
+}
