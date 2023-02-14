@@ -1,6 +1,13 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 
 function NotificationPage(props) {
+
+  const [color, setColor] = useState(null);
+
+  const readMsg = (i) => {
+    setColor(i);
+  };
+
   const notification = [
     {
       img: "./public/assets/img/avatar-mark-webber.webp",
@@ -75,32 +82,35 @@ function NotificationPage(props) {
           <p className="notification-logo">Notifications</p>
           <button className="notification-number">3</button>
         </div>
-        <p className="read-all">Mark all as read</p>
+        <p className="read-all" >Mark all as read</p>
       </div>
-      {notification.map((singleNotification, i) => (
-        <div key={i} className="notification-msg">
+      {notification.map((item, i) => (
+        <div key={i} onClick={() => readMsg(i)} className={color === i ? "unread-msg" : "notification-msg"} >
           <div className="notification-line">
             <img
               className="profile-img"
-              src={singleNotification.img}
+              src={item.img}
               alt="profile image"
             />
-            <span className="person-name">{singleNotification.name}</span>{" "}
-            <span className="person-para">{singleNotification.para}</span>{" "}
-            <span className="person-topic">{singleNotification.topic} </span>
-            {singleNotification.msg_img !== "" ? (
-              <img className="msg-img" src={singleNotification.msg_img} alt="msg_image"/>
+            <span className="person-name">{item.name}</span>{" "}
+            <span className="person-para">{item.para}</span>{" "}
+            <span className="person-topic">{item.topic} </span>{" "}
+            {item.msg_img !== "" ? (
+              <img
+                className="msg-img"
+                src={item.msg_img}
+                alt="msg_image"
+              />
             ) : (
-              <img className="no-msg-img"/>
+              <img className="no-msg-img" />
             )}
           </div>
-          <p className="msg-time">{singleNotification.time}</p>
-          {singleNotification.private_msg !== "" ? (
-            <div className="private-msg">{singleNotification.private_msg}</div>
+          <p className="msg-time">{item.time}</p>
+          {item.private_msg !== "" ? (
+            <div className="private-msg">{item.private_msg}</div>
           ) : (
             <div className="no-private-msg"></div>
-            )
-          }
+          )}
         </div>
       ))}
     </div>
