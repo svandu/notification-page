@@ -49,6 +49,7 @@
     margin-top: 18px;
     background-color: var(--highlight-color);
     color: #fff;
+    cursor: pointer;
 }
 
 .notification-msg {
