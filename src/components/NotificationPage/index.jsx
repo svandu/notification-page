@@ -1,14 +1,8 @@
-import React, {useState, useEffect} from "react";
+import { useState } from "react";
 
 function NotificationPage(props) {
 
-  const [color, setColor] = useState(null);
-
-  const readMsg = (i) => {
-    setColor(i);
-  };
-
-  const notification = [
+  const [notification, setNotification] = useState([
     {
       img: "./public/assets/img/avatar-mark-webber.webp",
       name: "Mark Webber",
@@ -73,7 +67,11 @@ function NotificationPage(props) {
       private_msg: "",
       msg_img: "",
     },
-  ];
+  ]);
+
+  const readMSg = () => {
+    setNotification()
+  }
 
   return (
     <div className="main-container">
@@ -82,25 +80,22 @@ function NotificationPage(props) {
           <p className="notification-logo">Notifications</p>
           <button className="notification-number">3</button>
         </div>
-        <p className="read-all" >Mark all as read</p>
+        <p className="read-all">Mark all as read</p>
       </div>
       {notification.map((item, i) => (
-        <div key={i} onClick={() => readMsg(i)} className={color === i ? "unread-msg" : "notification-msg"} >
+        <div
+          key={i}
+          className="notification-msg"
+          // className={ ? "unread-msg" : "notification-msg"}
+          // onClick={() => readMsg()}
+        >
           <div className="notification-line">
-            <img
-              className="profile-img"
-              src={item.img}
-              alt="profile image"
-            />
+            <img className="profile-img" src={item.img} alt="profile image" />
             <span className="person-name">{item.name}</span>{" "}
             <span className="person-para">{item.para}</span>{" "}
             <span className="person-topic">{item.topic} </span>{" "}
             {item.msg_img !== "" ? (
-              <img
-                className="msg-img"
-                src={item.msg_img}
-                alt="msg_image"
-              />
+              <img className="msg-img" src={item.msg_img} alt="msg_image" />
             ) : (
               <img className="no-msg-img" />
             )}
