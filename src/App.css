@@ -121,3 +121,9 @@
 .no-private-msg {
     display: none;
 }
+
+@media (max-width: 900px) {
+    .notification-msg {
+        font-size: 0.7rem;
+    }
+}
