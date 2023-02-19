@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Repository URL: (https://github.com/svandu/notification-page)
-- Live Site URL: (https://your-live-site-url.com)
+- Repository URL: [Repositiory Link](https://github.com/svandu/notification-page)
+- Live Site URL: [Live site Link](https://notification-page-flame.vercel.app/)
 
 ## My process
 
@@ -44,3 +44,17 @@ Users should be able to:
 
 ### What I learned
 
+- React hooks 
+- How to use useState to change the state of the components 
+- React component file and folder structure
+- to make responsive page
+
+### Continued development
+
+- Implementing and managing the state of the components using React hooks. 
+
+## Author
+
+- Website - [surbhi-vandana](https://github.com/svandu/notification-page)
+- Frontend Mentor - [@svandu](https://www.frontendmentor.io/profile/svandu)
+- Twitter - [Surbhi Vandana](linkedin.com/in/surbhi-vandana-65380b205)
