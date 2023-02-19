@@ -4,6 +4,7 @@ function NotificationPage(props) {
 
   const [notification, setNotification] = useState([
     {
+      id: 1,
       img: "./public/assets/img/avatar-mark-webber.webp",
       name: "Mark Webber",
       para: "reacted to your recent post",
@@ -13,6 +14,7 @@ function NotificationPage(props) {
       msg_img: "",
     },
     {
+      id: 2,
       img: "./public/assets/img/avatar-angela-gray.webp",
       name: "Angela Gray",
       para: "followed you",
@@ -22,6 +24,7 @@ function NotificationPage(props) {
       msg_img: "",
     },
     {
+      id: 3,
       img: "./public/assets/img/avatar-jacob-thompson.webp",
       name: "Jacob Thompson",
       para: "has joined your group",
@@ -31,6 +34,7 @@ function NotificationPage(props) {
       msg_img: "",
     },
     {
+      id: 4,
       img: "./public/assets/img/avatar-rizky-hasanuddin.webp",
       name: "Rizky Hasanuddin",
       para: "sent you a private message",
@@ -41,6 +45,7 @@ function NotificationPage(props) {
       msg_img: "",
     },
     {
+      id: 5,
       img: "./public/assets/img/avatar-kimberly-smith.webp",
       name: "Kimberly Smith",
       para: "commented on your picture",
@@ -50,6 +55,7 @@ function NotificationPage(props) {
       msg_img: "./public/assets/img/image-chess.webp",
     },
     {
+      id: 6,
       img: "./public/assets/img/avatar-nathan-peterson.webp",
       name: "Nathan Peterson",
       para: "reacted to your recent post",
@@ -59,6 +65,7 @@ function NotificationPage(props) {
       msg_img: "",
     },
     {
+      id: 7,
       img: "./public/assets/img/avatar-anna-kim.webp",
       name: "Anna Kim",
       para: "left the group",
@@ -68,9 +75,17 @@ function NotificationPage(props) {
       msg_img: "",
     },
   ]);
+  const [notificationNumber, setNotificationNumber] = useState(7);
 
-  const readMSg = () => {
-    setNotification()
+  const readMsg = (item) => {
+    setNotification((prev) => [...prev],(item.isRead =  true));
+    setNotificationNumber(notificationNumber - 1);
+  }
+
+  const markAllRead = () => {
+    notification.forEach((item) => 
+    setNotification((prev) => [...prev] , (item.isRead = true)));
+    setNotificationNumber(0)
   }
 
   return (
@@ -78,16 +93,15 @@ function NotificationPage(props) {
       <div className="header-container">
         <div className="first-part">
           <p className="notification-logo">Notifications</p>
-          <button className="notification-number">3</button>
+          <button className="notification-number">{notificationNumber}</button>
         </div>
-        <p className="read-all">Mark all as read</p>
+        <p className="read-all" onClick={markAllRead}>Mark all as read</p>
       </div>
       {notification.map((item, i) => (
         <div
           key={i}
-          className="notification-msg"
-          // className={ ? "unread-msg" : "notification-msg"}
-          // onClick={() => readMsg()}
+          className={item.isRead ? "unread-msg" : "notification-msg"}
+          onClick={() => readMsg(item)}
         >
           <div className="notification-line">
             <img className="profile-img" src={item.img} alt="profile image" />
