@@ -5,7 +5,7 @@ function NotificationPage(props) {
   const [notification, setNotification] = useState([
     {
       id: 1,
-      img: "./public/assets/img/avatar-mark-webber.webp",
+      img: "/assets/img/avatar-mark-webber.webp",
       name: "Mark Webber",
       para: "reacted to your recent post",
       topic: "My first tournament today!",
@@ -15,7 +15,7 @@ function NotificationPage(props) {
     },
     {
       id: 2,
-      img: "./public/assets/img/avatar-angela-gray.webp",
+      img: "/assets/img/avatar-angela-gray.webp",
       name: "Angela Gray",
       para: "followed you",
       topic: "",
@@ -25,7 +25,7 @@ function NotificationPage(props) {
     },
     {
       id: 3,
-      img: "./public/assets/img/avatar-jacob-thompson.webp",
+      img: "/assets/img/avatar-jacob-thompson.webp",
       name: "Jacob Thompson",
       para: "has joined your group",
       topic: "Chess Club",
@@ -35,7 +35,7 @@ function NotificationPage(props) {
     },
     {
       id: 4,
-      img: "./public/assets/img/avatar-rizky-hasanuddin.webp",
+      img: "/assets/img/avatar-rizky-hasanuddin.webp",
       name: "Rizky Hasanuddin",
       para: "sent you a private message",
       topic: "",
@@ -46,17 +46,17 @@ function NotificationPage(props) {
     },
     {
       id: 5,
-      img: "./public/assets/img/avatar-kimberly-smith.webp",
+      img: "/assets/img/avatar-kimberly-smith.webp",
       name: "Kimberly Smith",
       para: "commented on your picture",
       topic: "",
       time: "1 week ago",
       private_msg: "",
-      msg_img: "./public/assets/img/image-chess.webp",
+      msg_img: "/assets/img/image-chess.webp",
     },
     {
       id: 6,
-      img: "./public/assets/img/avatar-nathan-peterson.webp",
+      img: "/assets/img/avatar-nathan-peterson.webp",
       name: "Nathan Peterson",
       para: "reacted to your recent post",
       topic: "5 end-game strategies to increase you win rate",
@@ -66,7 +66,7 @@ function NotificationPage(props) {
     },
     {
       id: 7,
-      img: "./public/assets/img/avatar-anna-kim.webp",
+      img: "/assets/img/avatar-anna-kim.webp",
       name: "Anna Kim",
       para: "left the group",
       topic: "Chess Club",
