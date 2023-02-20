@@ -44,7 +44,7 @@ Users should be able to:
 
 ### What I learned
 
-- React hooks 
+- Hoe to use react hooks 
 - How to use useState to change the state of the components 
 - React component file and folder structure
 - to make responsive page
