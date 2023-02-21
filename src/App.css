@@ -124,12 +124,16 @@
 
 @media (max-width: 900px) {
     .main-container {
-        margin: 0;
+        margin: 0 2px;
         padding: 0;
         width: 100%;
     }
     .notification-msg, .unread-msg {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    .notification-msg {
+        margin: 8px 0;
     }
 
     .private-msg {
