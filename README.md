@@ -57,4 +57,4 @@ Users should be able to:
 
 - Website - [surbhi-vandana](https://github.com/svandu/notification-page)
 - Frontend Mentor - [@svandu](https://www.frontendmentor.io/profile/svandu)
-- Linkdin - [Surbhi Vandana](linkedin.com/in/surbhi-vandana-65380b205)
+- Twitter - [Surbhi Vandana](https://twitter.com/SurbhiVandana)
