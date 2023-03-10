@@ -95,7 +95,7 @@ function NotificationPage(props) {
           <p className="notification-logo">Notifications</p>
           <button className="notification-number">{notificationNumber}</button>
         </div>
-        <p className="read-all" onClick={markAllRead}>Mark all as read</p>
+        <p className="read-all" onClick={markAllRead}>Mark as all read</p>
       </div>
       {notification.map((item, i) => (
         <div
